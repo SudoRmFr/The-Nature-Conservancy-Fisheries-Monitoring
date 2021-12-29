@@ -74,7 +74,7 @@ And then run `python3 prepare.py`.
 
 - If you want to train the InceptionV3 (Keras), please refer to `inceptionV3/`.
 
-# Reference
+## Reference
 
 - Counterfactual Attention Learning (CAL)
     - [Code](https://www.kaggle.com/c/the-nature-conservancy-fisheries-monitoring/data)
@@ -82,5 +82,5 @@ And then run `python3 prepare.py`.
 - Weakly Supervised Data Augmentation Network (WS-DAN)
     - [Code](https://github.com/GuYuc/WS-DAN.PyTorch)
     - [Paper](https://arxiv.org/abs/1901.09891v2)
-- CoAtNet code are based on https://github.com/chinhsuanwu/coatnet-pytorch (MIT license)  
+- CoAtNet code are modified on https://github.com/chinhsuanwu/coatnet-pytorch (MIT license)  
 
