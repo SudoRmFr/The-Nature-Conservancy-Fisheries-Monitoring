@@ -64,11 +64,15 @@ And then run `python3 prepare.py`.
   - top-3-probability-adjustment rule: the 3 classes with the highest prob are assigned 0.25, other 5 classes are assigned 0.05
   - top-1-probability-adjustment rule: the 1 classes with the highest prob are assigned 0.507, other 5 classes are assigned 0.07242857142
 
-# Ensemble different prediction files
+## Ensemble different prediction files
 
 - Modify `aggregate.py`. Set what csv_files to vote. Set the way you want to set weights. Set the method you want to assign probabilities manually. 
 - Run `python3 aggregate.py`
 - Because this competition evaluates your submission by calculating log-loss. It's suggested to modify the probability prediction to avoid getting many penalties by some bad cases.
+
+## InceptionV3
+
+- If you want to train the InceptionV3 (Keras), please refer to `inceptionV3/`.
 
 # Reference
 
