@@ -1,0 +1,9 @@
+.idea/
+visual*/
+backup/
+save/
+pred/
+apex/
+the-nature-conservancy-fisheries-monitoring/
+__pycache__/
+aggregate_backup.py
