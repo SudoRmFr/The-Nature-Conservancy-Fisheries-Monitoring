@@ -74,6 +74,39 @@ And then run `python3 prepare.py`.
 
 - If you want to train the InceptionV3 (Keras), please refer to `inceptionV3/`.
 
+## Other tools
+
+### Mosaic augmentation
+If you want to run mosaic augmentation, you can use `mosaic-aug/mosaic-aug.py`.
+
+### Visualize top-n-probability-adjustment-rule
+
+You can run `top-n-prob-adjustment-analysis.py` to know how to tune for top-n-prob-adjustment better.
+- Top-n-prob-adjustment rule:
+  ```text
+  Assume k classes in total,
+  give top-n-prob classes a prob "a"; assign other classes "(1-a*n)/(k-n)".
+  
+  For example: 
+  Let n=3, k=8, a=0.25  
+  If we get a prediction: [0.12, 0.43, 0.05, 0.20, 0.07, 0.01, 0.02, 0.03]
+  We will manually make a new prediction: 
+                          [0.25, 0.25, 0.05, 0.25, 0.05, 0.05, 0.05, 0.05]
+  The top-3 classes will be 0.25; others will be 0.05.
+  
+  When n = 3, to pass the baseline 1.65163,
+  if we set a=0.275, the top-3-accuracy threshold will be lowest;
+  that is, if we can ensure our top-3-accuracy > 0.825050 and set a=0.275, then we'll pass the baseline 1.65163.
+  ```
+  ```text
+  When n = 1, min thresh 0.507381 occurs when a = 0.507000
+  When n = 2, min thresh 0.690625 occurs when a = 0.345000
+  When n = 3, min thresh 0.825050 occurs when a = 0.275000
+  When n = 4, min thresh 0.925423 occurs when a = 0.231000
+  When n = 5, min thresh 0.992130 occurs when a = 0.198000
+  ```
+  ![top-n-adjustment-analysis.png](top-n-adjustment-analysis.png)
+
 ## Reference
 
 - Counterfactual Attention Learning (CAL)
