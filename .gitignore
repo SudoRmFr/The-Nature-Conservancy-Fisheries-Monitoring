@@ -7,3 +7,7 @@ apex/
 the-nature-conservancy-fisheries-monitoring/
 __pycache__/
 aggregate_backup.py
+
+mosaic-aug/aug/
+mosaic-aug/mosaic_dataset/
+mosaic-aug/*dataset.zip
